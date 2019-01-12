@@ -1,6 +1,6 @@
 - categories = Category.all
-%ul.list-reset.flex
+%ul.list-reset.flex.justify-around
     - categories.each do |category|
-        %li.mr-6
-            %p.text-blue.hover:text-blue-darker
-                = link_to category.name, category_path(category)
+        %li
+            %p
+                = link_to category.name, category_path(category), class: 'category-item'

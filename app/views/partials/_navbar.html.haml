@@ -1,10 +1,10 @@
-%nav.flex.items-center.justify-between.flex-wrap.bg-red
+%nav.flex.items-center.justify-between.flex-wrap.sunrise
   .text-sm.lg:flex-grow.flex.justify-start.text-black.no-underline
-    =image_tag "the_sunrise_press.png", id: 'logo'
+    =image_tag "logo.png", id: 'logo'
   %button.block.lg:inline-block.lg:mt-0.text-black.uppercase.hover:text-black.mr-4.justify-end
     =link_to "Register"
   %button.block.lg:inline-block.lg:mt-0.text-white.hover:text-white.uppercase.justify-end
-    =link_to "Login"
+    =link_to "Login", class: 'text-black no-underline'
   %button.block.lg:inline-block.lg:mt-0.text-white.hover:text-white.uppercase.justify-end.pr-20
   -if user_signed_in?
     =link_to 'Logout', destroy_user_session_path, method: :delete
