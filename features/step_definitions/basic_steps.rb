@@ -17,6 +17,14 @@ end
 
 Given('I click on {string}') do |link|
     click_on link
+Given("the following user exists") do |table|
+    table.hashes.each do |user|
+        FactoryBot.create(:user, user)
+    end 
+end
+
+Given("I fill in {string} field with {string}") do |field, input|
+    fill_in field, with: input
 end
 
 Given('I click {string} within {string}') do |element, card|
