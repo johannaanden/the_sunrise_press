@@ -4,7 +4,9 @@
 
 @tailwind utilities;
 
-
+body{
+    font-family: Slabo27px;
+}
 .main{
     text-decoration: none;
     letter-spacing: 2px;

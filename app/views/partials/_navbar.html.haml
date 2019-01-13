@@ -1,7 +1,6 @@
 %nav.flex.items-center.justify-between.flex-wrap.sunrise
   .text-sm.lg:flex-grow.flex.justify-start.text-black.no-underline
-    = image_tag 'logo.png', id: 'logo'
-
+    = link_to image_tag('logo.png',{id: 'logo' }), root_path 
   - if user_signed_in?
     %button.bg-white.hover:bg-grey-lightest.text-grey-darkest.font-semibold.py-2.px-4.border.border-grey-light.rounded.shadow.mr-8
       = link_to 'Logout', destroy_user_session_path, method: :delete, class: 'text-black no-underline'
